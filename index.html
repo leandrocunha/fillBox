@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>FillBox JQuery Plugin</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <style type="text/css">
+			.thumbnail,
+			.thumbnail-wrapper,
+			.any-class-to-wrap {
+				float: left;
+				height: 300px;
+				margin: 0 20px 0 0;
+				overflow: hidden;
+				width: 300px;
+			}
+
+			code {
+    			font-family: monospace;
+			}
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+		<h1>FillBox</h1>
+		<p>A jQuery plugin to expand and centralize a image related to parent element independent of size him</p>
+
+		<h2>Example</h2>
+
+        <p>Pure HTML markup</p>
+        <div class="thumbnail-wrapper">
+        	<img src="jiujitsu.jpg" />
+        </div>
+
+		<p>The Bootstrap markup</p>
+        <div class="thumbnail">
+        	<img src="jiujitsu.jpg" />
+        </div>
+
+		<p>Any wrapper with plugin applied</p>
+        <div class="any-class-to-wrap">
+        	<img src="jiujitsu.jpg" class="fill-box" />
+        </div>
+
+		<br clear="both" />
+
+        <h2>Instructions</h2>
+		<h3>1.Getting Started</h3>
+		<p>Load jQuery and include FillBox plugin file</p>
+
+		<code>
+			&lt;!-- Include jquery --&gt;
+			<br />
+			&lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
+			<br /><br />
+			&lt;!-- Include fillbox plugin --&gt;
+			<br />
+			&lt;script src=&quot;fill.box.js&quot;&gt;&lt;/script&gt;
+		</code>
+
+		<h3>2.Set up your HTML</h3>
+		<p>You don't need any special markup. All you need is add the class ".fill-box" to any image warraped with a block (preferencially) element.</p>
+
+		<code>
+			&lt;div&gt;
+			<br />
+			&lt;img src=&quot;myimage.jpg&quot; class=&quot;fill-box&quot; /&gt;
+			<br />
+			&lt;/div&gt;
+		</code>
+
+		<h3>3.Call the plugin</h3>
+		<p>Now just call the FillBox initializer function and tadaaaaa.</p>
+		<code>
+			$(".fill-box").fillBox();
+		</code>
+
+		<h3>Thanks</h3>
+		<p>Special thank you to <a href="http://www.allanrabelo.com.br" target="_blank">Allan Rabelo</a>, designer responsable for this layout</p>
+		<h3>License</h3>
+		<p>The MIT License (MIT)</p>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="fill.box.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+        	$(document).ready(function(){
+        		$('.fill-box').fillBox();
+        	});
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
